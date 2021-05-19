@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <button @click="nome = 'novo biel'">Click</button><br>
+    <button @click="fullName = 'novo biel'">Click</button><br>
 <!--     {{ count }}<br>
     <small>pimeira vez</small><br>
     {{fullName}}<br>
@@ -20,10 +20,17 @@ export default {
     }
   },
   computed:{
-   fullName(){
-     //return Math.random();
-     return this.nome + " " + this.sobrenome;
-   }
+   fullName:{
+    get(){
+           return this.nome + " " + this.sobrenome;
+    },
+    set(value){
+     console.log(value);
+     const  [ novoNome, novoSobrenome] = value.split(' ');
+     this.nome = novoNome;
+     this.sobrenome = novoSobrenome;
+    }
+  }
   },
   methods:{
    Increment(){
