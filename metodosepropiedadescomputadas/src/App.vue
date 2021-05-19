@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <button @click="Increment">Click</button>
-    {{ count }}
+    <button @click="nome = 'novo biel'">Click</button><br>
+<!--     {{ count }}<br>
     <small>pimeira vez</small><br>
     {{fullName}}<br>
-    <small>segunda vez</small><br>
+ -->    <small>segunda vez</small><br> 
     {{fullName}}
   </div>
 </template>
@@ -21,8 +21,8 @@ export default {
   },
   computed:{
    fullName(){
-     return Math.random();
-     //return this.nome + " " + this.sobrenome;
+     //return Math.random();
+     return this.nome + " " + this.sobrenome;
    }
   },
   methods:{
