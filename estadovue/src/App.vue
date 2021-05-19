@@ -13,6 +13,11 @@ export default {
     return{
       count:0,
     } 
+  },
+  mounted(){//quando o componente é renderizado na tela
+   console.log(this);
+   console.log(this.count);
+   this.count = 100;
   }
 }
 </script>
