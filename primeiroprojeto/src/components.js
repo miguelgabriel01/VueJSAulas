@@ -12,4 +12,5 @@ Vue.component('ButtonString',{
       this.count++;
     },
   },
+
 });
