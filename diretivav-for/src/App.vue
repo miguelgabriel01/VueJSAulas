@@ -9,8 +9,8 @@
     </ul>
     <p>com objetos</p>
         <ul>
-      <li v-for="(item2,index) in todos" :key="index">
-        {{item2}}
+      <li v-for="(item2,chave,index) in todos2" :key="index">
+        {{chave}}:{{item2}}-{{index}}
       </li>
     </ul>
   </div>
