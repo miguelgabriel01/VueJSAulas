@@ -1,24 +1,41 @@
 <template>
   <div id="app">
     <h1>Diretivas v-for</h1>
-    <p>com array</p>
+<div style="display:none">
+          <p>com array</p>
     <ul>
       <li v-for="(item,index) in todos" :key="index">
         {{item}}
       </li>
     </ul>
-    <p>com objetos</p>
+    </div>
+<div style="display:none">
+      <p>com objetos</p>
         <ul>
       <li v-for="(item2,chave,index) in todos2" :key="index">
         {{chave}}:{{item2}}-{{index}}
       </li>
     </ul>
-    <p>Com Strings</p>
+</div>
+
+<div style="display:none">
+      <p>Com Strings</p>
         <ul>
       <li v-for="(char,index) in todos3" :key="index">
         {{char}} - {{index}}
       </li>
     </ul>
+</div>
+
+    <p>Uso com v-if</p>
+    <ul>
+      <li v-for="(todo,index) in filterTodos" :key="index">
+       {{ todo }}
+      </li>
+    </ul>
+
+
+
   </div>
 </template>
 
@@ -35,7 +52,20 @@ export default {
         item1:'item um',
         item2:'item dois',
       },
-      todos3:'Hello blá,blá,blá..'
+      todos3:'Hello blá,blá,blá..',
+      valueCondi: [
+      {label:'Todo 1', iscompleted: true},
+      {label:'Todo 3', iscompleted: true},
+      {label:'Todo 4', iscompleted: false},
+      {label:'Todo 4', iscompleted: false},
+    ]
+    };
+
+  },
+  //validação para só exibir de acordo com uma condição
+  computed:{
+    filterTodos(){
+      return this.valueCondi.filter(valueCondi => !valueCondi.iscompleted)
     }
   }
 }
