@@ -1,9 +1,16 @@
 <template>
   <div id="app">
     <h1>Diretivas v-for</h1>
+    <p>com array</p>
     <ul>
       <li v-for="(item,index) in todos" :key="index">
         {{item}}
+      </li>
+    </ul>
+    <p>com objetos</p>
+        <ul>
+      <li v-for="(item2,index) in todos" :key="index">
+        {{item2}}
       </li>
     </ul>
   </div>
@@ -18,6 +25,10 @@ export default {
   data(){
     return{
       todos:['item 1','item 2','item 3'],
+      todos2:{
+        item1:'item um',
+        item2:'item dois',
+      }
     }
   }
 }
