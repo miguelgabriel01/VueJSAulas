@@ -28,14 +28,13 @@
 </div>
 
     <p>Uso com v-if</p>
+    <template v-if="filterTodos.length > 0">
     <ul>
-      <li v-for="(todo,index) in filterTodos" :key="index">
+      <li v-for="(todo,index) in filterTodos" :key="index" >
        {{ todo }}
       </li>
     </ul>
-
-
-
+    </template>
   </div>
 </template>
 
