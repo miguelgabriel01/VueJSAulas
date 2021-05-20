@@ -10,8 +10,8 @@
     <a :href="urlYoutube" :style="styleText">Youtube</a>
 
     <p>uso das props</p>
-    <Title titulo="Titulo 1"></Title>
-    <Title titulo="Titulo 2"></Title>
+    <Title :titulo="1" subtitulo="--------"></Title>
+    <Title :titulo="2"></Title>
   </div>
 </template>
 
