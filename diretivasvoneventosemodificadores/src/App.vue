@@ -5,9 +5,10 @@
     <button @click="increment"> Click 2 com metodo || {{count2}}</button><br><br>
     <button @click="increment2(2,$event)"> Click 3 com metodos e parametro passada || {{count3}}</button><br><br><br>
 
-    <input type="text" @input="text = $event">
-    {{text}}
-    <listItem/>
+    <input type="text" @keyup.enter="increment">
+    {{count2}}
+    <listItem @increment="increment"/>
+    {{count2}}
   </div>
 </template>
 
