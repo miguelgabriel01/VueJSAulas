@@ -13,6 +13,12 @@
         {{chave}}:{{item2}}-{{index}}
       </li>
     </ul>
+    <p>Com Strings</p>
+        <ul>
+      <li v-for="(char,index) in todos3" :key="index">
+        {{char}} - {{index}}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -28,7 +34,8 @@ export default {
       todos2:{
         item1:'item um',
         item2:'item dois',
-      }
+      },
+      todos3:'Hello blá,blá,blá..'
     }
   }
 }
