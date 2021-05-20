@@ -3,7 +3,7 @@
     <h1>Diretivas V-on || Eventos || Modificadores</h1>
     <button @click="count1++"> Click 1 com expressão || {{count1}}</button><br><br>
     <button @click="increment"> Click 2 com metodo || {{count2}}</button><br><br>
-    <button @click="increment2(2)"> Click 3 com metodos e parametro passada || {{count3}}</button>
+    <button @click="increment2(2,$event)"> Click 3 com metodos e parametro passada || {{count3}}</button>
     <listItem/>
   </div>
 </template>
@@ -27,7 +27,8 @@ export default {
     increment(){
      this.count2++;
     },
-    increment2(quantidade){
+    increment2(quantidade,event){
+     alert(event);
       this.count3+=quantidade;
     }
   }
