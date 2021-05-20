@@ -3,7 +3,10 @@
     <h1>Diretivas V-on || Eventos || Modificadores</h1>
     <button @click="count1++"> Click 1 com expressão || {{count1}}</button><br><br>
     <button @click="increment"> Click 2 com metodo || {{count2}}</button><br><br>
-    <button @click="increment2(2,$event)"> Click 3 com metodos e parametro passada || {{count3}}</button>
+    <button @click="increment2(2,$event)"> Click 3 com metodos e parametro passada || {{count3}}</button><br><br><br>
+
+    <input type="text" @input="text = $event">
+    {{text}}
     <listItem/>
   </div>
 </template>
@@ -18,6 +21,7 @@ export default {
   },
   data(){
     return{
+     text:'',
      count1:0,
      count2:0,
      count3:0,
